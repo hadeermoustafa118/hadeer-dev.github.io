@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hadeer | Mobile App Developer</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <!-- Header -->
-    <!-- Header -->
     <header>
         <div class="header-content">
             <img src="assets/personal-image.jpg" alt="Hadeer Profile" class="profile-img">
-            <h1>👋 Hi, I'm Hadeer</h1>
-            <p class="tagline">Mobile App Developer | Flutter | Firebase</p>
+            <h1>👋 Hi, I'm Hadeer Moustafa</h1>
+            <p class="tagline">Mobile App Developer | Flutter & Firebase Enthusiast</p>
             <nav>
-                <a href="#about">About</a>
+                <a href="#about">About Me</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
@@ -30,18 +30,18 @@
     <section id="about" class="about-section">
         <h2>About Me</h2>
         <p>
-            I’m a passionate Mobile App Developer specializing in Flutter.
-            I love building apps that solve real-world problems and deliver seamless user experiences.
+            I am a passionate Mobile App Developer specializing in Flutter and Firebase.
+            I enjoy crafting beautiful, performant apps that solve real-world problems.
             <br><br>
-            Currently, I focus on Flutter + Firebase apps, and I’m always learning new technologies
-            to improve my craft and deliver better products.
+            Constantly learning and improving, I aim to deliver seamless user experiences
+            and scalable solutions.
         </p>
     </section>
 
 
     <!-- Skills -->
     <section id="skills" class="skills-section">
-        <h2>Skills</h2>
+        <h2>Skills & Technologies</h2>
         <div class="skills-list">
             <span>Flutter</span>
             <span>Dart</span>
@@ -53,34 +53,55 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="projects-section">
-        <h2>Projects</h2>
+    <section id="projects" class="projects-section" data-animate="fade-in">
+        <h2>Highlighted Projects</h2>
 
         <div class="project-card">
             <h3>📱 Invoice Manager App</h3>
-            <p>A Flutter app to manage and export invoices with filtering options.</p>
+            <p>A Flutter app to manage and export invoices with filtering options and PDF export.</p>
+            <video controls width="100%" height="auto" preload="metadata" poster="assets/invoice-app-screenshot.jpg">
+                <source src="assets/invoice-app-demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <a href="https://github.com/yourusername/invoice-app" target="_blank">🔗 View Code</a>
         </div>
 
         <div class="project-card">
             <h3>🌦️ Weather App</h3>
-            <p>Real-time weather app built with Flutter and OpenWeather API.</p>
+            <p>Real-time weather app built with Flutter and OpenWeather API, featuring location-based forecasts.</p>
+            <img src="assets/weather-app-screenshot.jpg" alt="Weather App Screenshot" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
             <a href="https://github.com/yourusername/weather-app" target="_blank">🔗 View Code</a>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="contact-section">
-        <h2>Contact</h2>
-        <p>📧 <a href="mailto:yourname@email.com">yourname@email.com</a></p>
-        <p>💻 <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-        <p>🔗 <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
+    <section id="contact" class="contact-section" data-animate="slide-up">
+        <h2>Get In Touch</h2>
+        <div class="contact-info">
+            <p>👤 Pravesh Kumar</p>
+            <p>📞 +91 9871065402</p>
+            <p>🏢 A-Tech Automation & Robotics</p>
+            <p>📍 Plot No 3637, Badkhal Pali Road Near Ultimate Dharam Kanta, Pali Faridabad</p>
+            <p>📧 <a href="mailto:pravesh.kumar@atechautomation.com">pravesh.kumar@atechautomation.com</a></p>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>© 2025 Hadeer Moustafa · Built with ❤️ using GitHub Pages</p>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+    </script>
 
 </body>
 
