@@ -244,71 +244,126 @@ header nav a:hover {
     align-items: center;
     gap: 5rem;
     flex: 1;
-    
+
 }
+
 .skills-grid img {
-    flex: 0 0 40%; /* fixed width ~40% */
+    flex: 0 0 40%;
+    /* fixed width ~40% */
     /* max-width: 500px; */
     height: auto;
 }
-.skills-grid > div {
-    flex: 1; /* take the rest */
-    min-width: 0; /* prevents flex overflow issues */
+
+.skills-grid>div {
+    flex: 1;
+    /* take the rest */
+    min-width: 0;
+    /* prevents flex overflow issues */
 }
 
 
-/* Projects */
+/* Projects Section */
 .projects-section {
-    padding: 5rem 2rem 4rem;
-    background: #fff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 5rem 2rem;
+    background: #fdfdfd;
+}
+
+.projects-title {
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #222;
+    font-weight: 700;
+}
+
+.projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
 .project-card {
-    background: #f8f9ff;
+    background: #fff;
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.project-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #6C63FF, #8a80ff);
+    /* use your portfolio primary color */
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 30px;
+    margin-bottom: 1rem;
 }
 
 .project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #6a11cb;
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+    color: #222;
 }
 
-.project-card p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #666;
-}
-
-.project-card a {
-    color: #2575fc;
+.project-type {
+    font-size: 0.95rem;
     font-weight: 600;
+    color: #6C63FF;
+    /* primary color */
+    margin-bottom: 0.8rem;
+}
+
+.project-desc {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tags span {
+    background: #f0f0ff;
+    color: #6C63FF;
+    /* primary color */
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.project-card.more {
+    text-align: center;
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #6C63FF;
     text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border 0.2s ease;
 }
 
-.project-card a:hover {
-    color: #6a11cb;
-    text-decoration: underline;
+.github-link:hover {
+    border-bottom: 2px solid #6C63FF;
 }
 
-.private-note {
-    font-size: 0.9rem;
-    color: #999;
-    font-style: italic;
-}
 
 /* UI/UX Section */
 .uiux-section {
@@ -338,35 +393,52 @@ header nav a:hover {
 }
 
 /* Contact */
+/* Contact Section */
 .contact-section {
-    padding: 5rem 2rem 4rem;
-    background: #fff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
 }
 
 .contact-info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.contact-section p {
-    font-size: 1.2rem;
-    color: #555;
-    margin: 0;
-    text-align: left;
+.contact-card {
+  background: #fff;
+  border: 2px solid #eee;
+  border-radius: 15px;
+  padding: 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.contact-section a {
-    color: #2575fc;
-    font-weight: 600;
-    text-decoration: none;
+.contact-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  color: var(--primary-color);
 }
 
-.contact-section a:hover {
-    color: #6a11cb;
-    text-decoration: underline;
+.contact-card .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Footer */
