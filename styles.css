@@ -437,7 +437,7 @@ header nav a:hover {
     display: inline-block;
     margin-top: 2rem;
     padding: 0.7rem 1.2rem;
-    background: var(--primary-color);
+    background: #6f6ab5;
     color: white;
     border-radius: 20px;
     text-decoration: none;
@@ -446,7 +446,7 @@ header nav a:hover {
 }
 
 .btn-secondary:hover {
-    background: #574fdb;
+    background: #544ec5;
     /* darker shade of primary */
 }
 
